@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>mvc_dot_net_dive_in_hands_on_dirty</RootNamespace>
+  </PropertyGroup>
+
+</Project>
