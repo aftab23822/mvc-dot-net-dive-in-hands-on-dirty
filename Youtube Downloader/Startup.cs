@@ -46,8 +46,10 @@ namespace Youtube_Downloader
 
             app.UseAuthorization();
 
+
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapHealthChecks("/healthz").RequireAuthorization();
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

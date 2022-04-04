@@ -41,10 +41,11 @@ namespace mvc_dot_net_dive_in_hands_on_dirty
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
 
             app.UseAuthorization();
+
+            
 
             app.UseEndpoints(endpoints =>
             {

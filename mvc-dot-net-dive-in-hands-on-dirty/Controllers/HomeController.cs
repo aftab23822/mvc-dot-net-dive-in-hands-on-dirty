@@ -20,6 +20,17 @@ namespace mvc_dot_net_dive_in_hands_on_dirty.Controllers
 
         public IActionResult Index()
         {
+            ViewData["hello"] = "hello";
+
+            Students std= new Students();
+            List<Students> stdList= new List<Students>();
+            stdList.Add(new Students { age = 20, email = "abcd@gmail.com", id = 10, name = "Abcd" });
+            std.age = 30;
+            std.email = "aftab@gmail.com";
+            std.id = 223;
+            std.name = "aftab";
+            stdList.Add(std);
+            ViewData["std"] = stdList; 
             return View();
         }
 
@@ -27,7 +38,7 @@ namespace mvc_dot_net_dive_in_hands_on_dirty.Controllers
         {
             return View();
         }
-
+        [Route("about")]
         public IActionResult About()
         {
             return View();
